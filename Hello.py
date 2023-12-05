@@ -199,7 +199,7 @@ MAXLEN = 35
 tokenizer = Tokenizer(oov_token='UNK')
 
 # Load the tokenizer from file
-with open('fyp-deploy1205/tokenizer.pickle', 'rb') as handle:
+with open('fyp-deploy1205/blob/0d822884be6900904fec6bc4f76b933076594af6/tokenizer.pickle', 'rb') as handle:
     loaded_tokenizer = pickle.load(handle)
 
 model = load_model('fyp-deploy1205/best_biLSTM_model.h5', compile=False)
