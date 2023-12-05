@@ -199,12 +199,12 @@ MAXLEN = 35
 tokenizer = Tokenizer(oov_token='UNK')
 
 # Load the tokenizer from file
-with open('/workspaces/fyp-deploy1205/tokenizer.pickle', 'rb') as handle:
+with open('/fyp-deploy1205/tokenizer.pickle', 'rb') as handle:
     loaded_tokenizer = pickle.load(handle)
 
-model = load_model('/workspaces/fyp-deploy1205/best_biLSTM_model.h5', compile=False)
+model = load_model('/fyp-deploy1205/best_biLSTM_model.h5', compile=False)
 
-label_encoder = joblib.load('/workspaces/fyp-deploy1205/label_encoder.pkl')
+label_encoder = joblib.load('/fyp-deploy1205/label_encoder.pkl')
 
 emoji = {"anger": "😡", "fear":"😨","joy": "😆","love":"🥰","sadness":"😭","surprise":"😮"}
 def main():
@@ -267,13 +267,13 @@ def main():
     st.subheader("About This Project")
     # Display an image
 
-    image_path = "/workspaces/fyp-deploy1205/MeetTheGroup.jpg"  # Replace with the actual path to your image file
+    image_path = "/fyp-deploy1205/MeetTheGroup.jpg"  # Replace with the actual path to your image file
     image_path = Image.open(image_path)
     st.image(image_path, caption="FYP Project Team", use_column_width=True)
 
   elif choice == "Data Exploration":
     st.subheader("Exploration of The Training Dataset")
-    image_path = "/workspaces/fyp-deploy1205/emotiondistribution.jpg"  # Replace with the actual path to your image file
+    image_path = "/fyp-deploy1205/emotiondistribution.jpg"  # Replace with the actual path to your image file
     image_path = Image.open(image_path)
     st.image(image_path, caption="Emotion Frequency Count Distribution", use_column_width=True)
 
